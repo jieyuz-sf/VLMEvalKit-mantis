@@ -193,7 +193,7 @@ class Mantis(BaseModel):
             assert conv.messages[-1][0] == conv.roles[1] and conv.messages[-1][1] == '', 'Format check'
             prompt = conv.get_prompt()
 
-        inputs = self.processor(prompt, images, return_tensors='pt', truncation=True, torch_dtype=torch.float16)
+        inputs = self.processor(prompt, images, return_tensors='pt', truncation=True)
         # FIXME: Fuyu model would return a list instead of a pytorch tensor. This weird behavior needs fixing.
         if 'image_patches' in inputs.keys():
             inputs['image_patches'] = inputs['image_patches'][0]
