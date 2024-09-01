@@ -107,7 +107,7 @@ def infer_data(model_name, work_dir, dataset, out_file, verbose=False, api_nproc
     # model = supported_VLM[model_name]() if isinstance(model_name, str) else model_name
     if isinstance(model_name, str):
         if model_name not in supported_VLM:
-            model = partial(Mantis, model_pth=model_name)()
+            model = partial(Mantis, model_path=model_name)()
         else:
             model = supported_VLM[model_name]()
     else:
