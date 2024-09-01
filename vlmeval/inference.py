@@ -3,6 +3,9 @@ import torch.distributed as dist
 from vlmeval.config import supported_VLM
 from vlmeval.utils import track_progress_rich
 from vlmeval.smp import *
+from vlmeval.vlm import *
+from vlmeval.api import *
+from functools import partial
 
 FAIL_MSG = 'Failed to obtain answer via API.'
 
