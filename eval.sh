@@ -19,7 +19,7 @@ source /export/share/zixianma/miniconda/bin/activate
 conda activate mantis
 
 python run.py --data SLIDEVQA MMT-Bench_VAL_MI MMDU DUDE BLINK \
-    --model /export/share/jieyu/mantis_ckpt/$1 \
+    --model /export/share/jieyu/mantis_ckpt/Mantis-8B-siglip-llama3-pretraind/$1/checkpoint-final \
     --gpu_id 0 --verbose --nproc 4;
 
 # python3 compile.py --resdir /export/share/ayan/llava_checkpoints/$1
