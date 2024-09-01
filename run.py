@@ -84,6 +84,8 @@ def main():
                 dataset = dataset_list[0]
             else:
                 dataset = build_dataset(dataset_name, **dataset_kwargs)
+            print(dataset_name, dataset.TYPE)
+            
             if dataset is None:
                 logger.error(f'Dataset {dataset_name} is not valid, will be skipped. ')
                 continue
