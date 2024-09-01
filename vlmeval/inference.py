@@ -94,7 +94,6 @@ def infer_data(model_name, work_dir, dataset, out_file, verbose=False, api_nproc
             model = supported_VLM[model_name]()
     else:
         model = model_name
-    assert hasattr(model, 'chat_inner')
 
     is_api = getattr(model, 'is_api', False)
     if is_api:
