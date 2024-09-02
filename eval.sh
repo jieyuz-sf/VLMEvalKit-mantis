@@ -18,7 +18,7 @@ cd /export/share/jieyu/VLMEvalKit-mantis
 source /export/share/zixianma/miniconda/bin/activate
 conda activate mantis-eval
 
-python run.py --data MMT-Bench_VAL_MI MMDU DUDE BLINK \
+python run.py --data MMT-Bench_VAL_MI DUDE BLINK \
     --model /export/share/jieyu/mantis_ckpt/Mantis-8B-siglip-llama3-pretraind/$1/checkpoint-final --verbose --nproc 4;
 
 # python3 compile.py --resdir /export/share/ayan/llava_checkpoints/$1
