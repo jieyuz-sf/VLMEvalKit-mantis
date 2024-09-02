@@ -64,19 +64,19 @@ class Mantis(BaseModel):
                 )
             else:
                 self.processor = MLlavaProcessor.from_pretrained(self.model_path)
-                # model = LlavaForConditionalGeneration.from_pretrained(
-                #     self.model_path,
-                #     device_map='cuda',
-                #     attn_implementation=attn_implementation,
-                #     torch_dtype=torch.float16
-                # )
-                # self.processor = AutoProcessor.from_pretrained(self.model_path)
-                model = AutoModelForVision2Seq.from_pretrained(
+                model = LlavaForConditionalGeneration.from_pretrained(
                     self.model_path,
                     device_map='cuda',
                     attn_implementation=attn_implementation,
                     torch_dtype=torch.float16
                 )
+                # self.processor = AutoProcessor.from_pretrained(self.model_path)
+                # model = AutoModelForVision2Seq.from_pretrained(
+                #     self.model_path,
+                #     device_map='cuda',
+                #     attn_implementation=attn_implementation,
+                #     torch_dtype=torch.float16
+                # )
         else:
             self.processor = AutoProcessor.from_pretrained(self.model_path)
             model = AutoModelForVision2Seq.from_pretrained(
