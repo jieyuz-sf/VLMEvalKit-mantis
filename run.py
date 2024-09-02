@@ -91,16 +91,16 @@ def main():
                 logger.error(f'Dataset {dataset_name} is not valid, will be skipped. ')
                 continue
 
-            result_file = f'{pred_root}/{model_name}_{dataset_name}.xlsx'
+            result_file = f'{pred_root}/{dataset_name}.xlsx'
             if dataset_name in ['MMBench-Video']:
                 packstr = 'pack' if args.pack else 'nopack'
-                result_file = f'{pred_root}/{model_name}_{dataset_name}_{args.nframe}frame_{packstr}.xlsx'
+                result_file = f'{pred_root}/{dataset_name}_{args.nframe}frame_{packstr}.xlsx'
             elif dataset.MODALITY == 'VIDEO':
                 if args.pack:
                     logger.info(f'{dataset_name} not support Pack Mode, directly change to unpack')
                     args.pack = False
                 packstr = 'pack' if args.pack else 'nopack'
-                result_file = f'{pred_root}/{model_name}_{dataset_name}_{args.nframe}frame_{packstr}.xlsx'
+                result_file = f'{pred_root}/{dataset_name}_{args.nframe}frame_{packstr}.xlsx'
                 if dataset_name in ['Video-MME']:
                     subtitlestr = 'subs' if args.use_subtitle else 'nosubs'
                     result_file = result_file.replace('.xlsx', f'_{subtitlestr}.xlsx')
@@ -110,7 +110,7 @@ def main():
 
             if osp.exists(result_file) and args.rerun:
                 for keyword in ['openai', 'gpt', 'auxmatch']:
-                    os.system(f'rm {pred_root}/{model_name}_{dataset_name}_{keyword}*')
+                    os.system(f'rm {pred_root}/{dataset_name}_{keyword}*')
 
             if model is None:
                 model = model_name  # which is only a name
