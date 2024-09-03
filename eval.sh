@@ -18,7 +18,10 @@ cd /export/share/jieyu/VLMEvalKit-mantis
 source /export/share/zixianma/miniconda/bin/activate
 conda activate mantis-eval
 
-python run.py --data MMT-Bench_VAL_MI BLINK RealWorldQA MME LLaVABench MMVet SEEDBench_IMG MME MMBench_DEV_EN POPE HallusionBench ScienceQA_TEST ChartQA_TEST DocVQA_VAL MathVista TextVQA MMMU_DEV_VAL\
+# python run.py --data MMT-Bench_VAL_MI BLINK RealWorldQA MME LLaVABench MMVet SEEDBench_IMG MME MMBench_DEV_EN POPE HallusionBench ScienceQA_TEST ChartQA_TEST DocVQA_VAL MathVista TextVQA_VAL MMMU_DEV_VAL\
+#     --model /export/share/jieyu/mantis_ckpt/Mantis-8B-siglip-llama3-pretraind/$1/checkpoint-final --verbose --nproc 4;
+
+python run.py --data MathVista TextVQA_VAL MMMU_DEV_VAL\
     --model /export/share/jieyu/mantis_ckpt/Mantis-8B-siglip-llama3-pretraind/$1/checkpoint-final --verbose --nproc 4;
 
 # python3 compile.py --resdir /export/share/ayan/llava_checkpoints/$1
