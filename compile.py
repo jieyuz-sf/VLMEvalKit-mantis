@@ -76,7 +76,7 @@ if __name__ == '__main__':
 
 		if os.path.isdir(os.path.join(args.resdir, d, 'checkpoint-final')):
 
-			resdir = os.path.join(args.resdir, d)
+			resdir = os.path.join(args.resdir, d, 'checkpoint-final')
 			res_list = []
 			for benchmark in benchmark_list:
 				fn = os.path.join(resdir, f"{benchmark}")
