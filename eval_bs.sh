@@ -1,10 +1,9 @@
 #!/bin/bash
 
 # Load OpenAI keys.
-export OPENAI_API_KEY=$2
+export OPENAI_API_KEY=$
 export LMUData='/export/share/ayan/LMUData' ## directory to save all datasets
 export HF_HOME=/export/share/jieyu/cache/
-export RUN_NAME=$1
 
 # Run evaluation on a single GPU.
 ## Command line args:
