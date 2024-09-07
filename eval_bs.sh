@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Load OpenAI keys.
-export OPENAI_API_KEY=$
+export OPENAI_API_KEY=$1
 export LMUData='/export/share/jieyu/LMUData' ## directory to save all datasets
 export HF_HOME=/export/share/jieyu/cache/
 
