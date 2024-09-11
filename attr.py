@@ -2,7 +2,7 @@ from PIL import Image
 import json, os
 from tqdm import tqdm
 p = '/export/share/ayan/data/json_jieyu/attr_v2_train.json'
-img_folder = '/export/share/ayan/data/attr'
+img_folder = '/export/share/ayan/data'
 a = json.load(open(p, 'r'))
 newa = []
 for c in tqdm(a):
