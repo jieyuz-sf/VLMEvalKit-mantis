@@ -8,7 +8,7 @@ import pandas as pd
 def parse_args():
 	parser = argparse.ArgumentParser()
 	# parser.add_argument('--resdir', type=str, required=True)
-	parser.add_argument('--resdir', type=str, default='/mnt/sdc1/vg')
+	parser.add_argument('--resdir', type=str, default='/export/share/jieyu/mantis_ckpt/Mantis-8B-siglip-llama3-pretraind')
 	args = parser.parse_args()
 	return args
 
