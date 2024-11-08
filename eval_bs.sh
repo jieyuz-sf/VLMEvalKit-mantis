@@ -17,10 +17,10 @@ cd /export/share/jieyu/VLMEvalKit-mantis
 source /export/share/zixianma/miniconda/bin/activate
 conda activate mantis-eval
 
-for m in v3-both-0.1 v3-mc-0.1 v3-0.1
+for m in dc-both-0.05 dc-both-0.1 dc-both-0.2 dc-both-0.5
 do
   python run.py --data MMT-Bench_VAL_MI BLINK RealWorldQA MME LLaVABench MMVet SEEDBench_IMG MME MMBench_DEV_EN POPE HallusionBench ScienceQA_TEST ChartQA_TEST DocVQA_VAL MathVista_MINI TextVQA_VAL MMMU_DEV_VAL\
       --model /export/share/jieyu/mantis_ckpt/Mantis-8B-siglip-llama3-pretraind/$m/checkpoint-final --verbose --nproc 4;
 done
 
-python3 compile.py --resdir /export/share/jieyu/mantis_ckpt/Mantis-8B-siglip-llama3-pretraind
+# python3 compile.py --resdir /export/share/jieyu/mantis_ckpt/Mantis-8B-siglip-llama3-pretraind
